@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  go-server:
+  - apiVersion: v2
+    appVersion: v0.0.1
+    created: "2024-10-13T14:43:09.65191+03:00"
+    description: A Helm chart for Kubernetes
+    digest: d96afa75f180a69f622029398cd027a84ad67cc2d3b7e933d1893371a95249da
+    name: go-server
+    type: application
+    urls:
+    - go-server-0.0.1.tgz
+    version: 0.0.1
+generated: "2024-10-13T14:43:09.65009+03:00"
