@@ -17,7 +17,21 @@ func headers(w http.ResponseWriter, req *http.Request) {
 	}
 }
 
+func homepage(w http.ResponseWriter, req *http.Request) {
+	fmt.Fprintf(w, `
+		<html>
+			<head><title>Go Server</title></head>
+			<body>
+				<h1>Welcome to the Go Server</h1>
+				<p><a href="/healthz">Health Check</a></p>
+				<p><a href="/headers">View Headers</a></p>
+			</body>
+		</html>
+	`)
+}
+
 func main() {
+	http.HandleFunc("/", homepage)
 	http.HandleFunc("/healthz", healthz)
 	http.HandleFunc("/headers", headers)
 	fmt.Println("Starting server...")

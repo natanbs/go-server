@@ -1,7 +1,7 @@
 # Update these variables
 repo_owner=natanbs
 service_name=go-server
-tag=v0.0.1
+tag=v0.0.2
 # git clone https://github.com/${repo_owner}/${service_name}.git
 # cd ${service_name}
 
