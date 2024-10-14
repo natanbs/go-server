@@ -1,5 +1,5 @@
 # Helm repo
-CHART_VERSION=0.0.2
+CHART_VERSION=0.0.3
 echo ghcr.io login
 service_name=go-server
 repo_owner=natanbs

@@ -22,9 +22,11 @@ func homepage(w http.ResponseWriter, req *http.Request) {
 		<html>
 			<head><title>Go Server</title></head>
 			<body>
+				<center>
 				<h1>Welcome to the Go Server</h1>
 				<p><a href="/healthz">Health Check</a></p>
 				<p><a href="/headers">View Headers</a></p>
+				</center>
 			</body>
 		</html>
 	`)
