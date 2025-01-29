@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "go-server.fullname" . }}
+  namespace: {{ .Values.namespace }}
   labels:
     {{- include "go-server.labels" . | nindent 4 }}
 spec:
@@ -40,11 +41,11 @@ spec:
           livenessProbe:
             httpGet:
               path: /healthz
-              port: 8090
+              port: {{ .Values.service.port }}
           readinessProbe:
             httpGet:
               path: /healthz
-              port: 8090
+              port: {{ .Values.service.port }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
